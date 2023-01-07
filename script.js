@@ -89,95 +89,85 @@ let upperCasedCharacters = [
 ];
 
 // Variable Declaration
-let newPassword = "";
-let includeLength = "";
-let includeSpecialCharacter;
-let includeNumericCharacter;
-let includeUpperCase;
-let includeLowerCase;
+let passwordLength;
+let includeLowercase;
+let includeUppercase;
+let includeNumeric;
+let includeSpecial;
 
 // Function to prompt user for password
 function getPasswordOptions() {
   // Prompt to confirm how many characters the user would like in their password
-  let includeLength = prompt(
+  let passwordLength = prompt(
     "How many characters between 10-64 would you like your password to contain?"
   );
 
   // Loop if answer is outside the parameters
-  while (includeLength <= 10 || includeLength >= 64) {
+  while (passwordLength < 10 || passwordLength > 64) {
     alert(
-      "Password does not meet specified length requirement, please try again"
+      "Password does not meet specified length requirement, please try again."
     );
-    // User enters password length again
-    let includeLength = prompt(
+    // User inputs password length again
+    let passwordLength = prompt(
       "How many characters between 10-64 would you like your password to contain?"
     );
   }
-  // Return back the total characters the user will have
-  alert(`Your password will have ${includeLength} characters`);
+  // Return back the total characters the password will have
+  alert(`Your password will have ${passwordLength} characters`);
 
-  // window.confirm for user to select password criteria with  boolean response for each option and variable declared to store input
+  //window.confirm for user to select password criteria with  boolean response for each option and variable declared to store input
   let includeLowercase = confirm(
-    "Would you like to use LOWERCASE characters?\nIf yes press ok if no press cancel.\nRemember you should have at least one type of character"
+    "Would you like to use LOWERCASE characters?\nIf YES press ok, if NO press cancel.\nRemember that at least one type of character should be selected."
   );
   let includeUppercase = confirm(
-    "Would you like to use UPPERCASE characters?\nIf yes press ok if no press cancel.\nRemember you should have at least one type of character"
+    "Would you like to use UPPERCASE characters?\nIf YES press ok, if NO press cancel.\nRemember that at least one type of character should be selected."
   );
   let includeNumeric = confirm(
-    "Would you like to use NUMERIC characters?\nIf yes press ok if no press cancel.\nRemember you should have at least one type of character"
+    "Would you like to use NUMERIC characters?\nIf YES press ok if, NO press cancel.\nRemember that at least one type of character should be selected."
   );
-  let includeSpecialCharacters = confirm(
-    "Would you like to use SPECIAL characters characters?\nIf yes press ok if no press cancel.\nRemember you should have at least one type of character"
+  let includeSpecial = confirm(
+    "Would you like to use SPECIAL characters characters?\nIf YES press ok, if NO press cancel.\nRemember that at least one type of character should be selected."
   );
-  // Loop if answer is outside the parameters
+
+  // Loop if the users's input is outside the parameters
   while (
-    includeUpperCase === false &&
-    includeLowerCase === false &&
-    includeSpecialCharacter === false &&
-    includeNumericCharacter === false
+    includeLowercase === false &&
+    includeUppercase === false &&
+    includeNumeric === false &&
+    includeSpecial === false
   ) {
-    alert("You must choose at least one parameter");
-    let includeLowercase = confirm(
-      "Would you like to use LOWERCASE characters?\nIf yes press ok if no press cancel.\nRemember you should have at least one type of character"
+    alert("Remember that at least one type of character should be selected.");
+    includeLowercase = confirm(
+      "Would you like to use LOWERCASE characters?\nIf yes press ok if no press cancel.\nRemember that at least one type of character should be selected."
     );
-    let includeUppercase = confirm(
-      "Would you like to use UPPERCASE characters?\nIf yes press ok if no press cancel.\nRemember you should have at least one type of character"
+    includeUppercase = confirm(
+      "Would you like to use UPPERCASE characters?\nIf yes press ok if no press cancel.\nRemember that at least one type of character should be selected."
     );
-    let includeNumeric = confirm(
-      "Would you like to use NUMERIC characters?\nIf yes press ok if no press cancel.\nRemember you should have at least one type of character"
+    includeNumeric = confirm(
+      "Would you like to use NUMERIC characters?\nIf yes press ok if no press cancel.\nRemember that at least one type of character should be selected."
     );
-    let includeSpecialCharacters = confirm(
-      "Would you like to use SPECIAL characters characters?\nIf yes press ok if no press cancel.\nRemember you should have at least one type of character"
+    includeSpecial = confirm(
+      "Would you like to use SPECIAL characters characters?\nIf yes press ok if no press cancel.\nRemember that at least one type of character should be selected."
     );
   }
+
+  // console.log(passwordLength);
+  // console.log(includeLowercase);
+  // console.log(includeUppercase);
+  // console.log(includeNumeric);
+  // console.log(includeSpecial);
+
+  // Return an object with the user's inputs.
+  return {
+    passwordLength,
+    includeLowercase,
+    includeUppercase,
+    includeNumeric,
+    includeSpecial,
+  };
 }
 
-// Function for getting a random element from an array
+// Function for getting a random element from an array.
 function getRandom(arr) {
-  let randomChar = Math.floor(Math.random() * specialCharacters.length);
+  return arr[Math.floor(Math.random() * arr.length)];
 }
-
-// Function to generate password with user input
-function generatePassword() {
-  let newPassword = "";
-  for (let i = 0; i < 100; i++) {
-    newPassword += "j";
-  }
-
-  return newPassword;
-}
-
-// Get references to the #generate element
-////Assignment Code + Event Listener to prompt questions when button pushed
-let generateBtn = document.querySelector("#generate");
-
-// Write password to the #password input
-function writePassword() {
-  let password = generatePassword();
-  let passwordText = document.querySelector("#password");
-
-  passwordText.value = password;
-}
-
-// Add event listener to generate button
-generateBtn.addEventListener("click", writePassword);
