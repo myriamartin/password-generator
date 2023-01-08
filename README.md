@@ -1,9 +1,9 @@
 <!-- PROJECT LOGO -->
-<br />
+
+<a name="readme-top"></a>
+
 <div align="center">
-  <a href="#">
     <img src="./assets/1519782_colorful_document_note_office_paper_icon.png" alt="Logo" width="150">
-  </a>
 
   <h3 align="center">Module 5 Challenge: Password Generator</h3>
 
