@@ -115,7 +115,7 @@ function getPasswordOptions() {
   // Return back the total characters the password will have
   alert(`Your password will have ${passwordLength} characters.`);
 
-  //window.confirm for user to select password criteria with  boolean response for each option and variable declared to store input
+  //window.confirm for user to select password criteria with boolean response for each option and variable declared to store input
   let includeLowercase = confirm(
     "1/4\nWould you like to use LOWERCASE characters?\nIf YES press ok, if NO press cancel.\nRemember that at least one type of character should be selected."
   );
