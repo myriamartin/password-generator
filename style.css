@@ -1,3 +1,8 @@
+:root {
+  --clr: #3b4954;
+  --bgclr: #e7e9eb;
+}
+
 *,
 *::before,
 *::after {
@@ -27,15 +32,15 @@ header {
   text-align: center;
   padding: 20px;
   padding-top: 0px;
-  color: hsl(206, 17%, 28%);
+  color: var(--clr);
 }
 
 .card {
-  background-color: hsl(0, 0%, 100%);
+  background-color: #ffffff;
   border-radius: 5px;
   border-width: 1px;
   box-shadow: rgba(0, 0, 0, 0.15) 0px 2px 8px 0px;
-  color: hsl(206, 17%, 28%);
+  color: var(--clr);
   font-size: 18px;
   margin: 0 auto;
   max-width: 800px;
@@ -46,7 +51,7 @@ header {
   content: " ";
   display: block;
   width: 100%;
-  background: #e7e9eb;
+  background: var(--bgclr);
   height: 2px;
 }
 
@@ -62,7 +67,7 @@ header {
   content: " ";
   display: block;
   width: 100%;
-  background: #e7e9eb;
+  background: var(--bgclr);
   height: 2px;
 }
 
@@ -104,10 +109,7 @@ button[disabled] {
   border: none;
   display: block;
   width: 100%;
-  padding-top: 15px;
-  padding-left: 15px;
-  padding-right: 15px;
-  padding-bottom: 85px;
+  padding: 85px 15px;
   font-size: 1.2rem;
   text-align: center;
   margin-top: 10px;
@@ -116,6 +118,9 @@ button[disabled] {
   border-radius: 6px;
   resize: none;
   overflow: hidden;
+}
+#password::placeholder {
+  color: #3b4954;
 }
 
 @media (max-width: 690px) {
@@ -133,5 +138,11 @@ button[disabled] {
 @media (max-width: 500px) {
   .btn {
     font-size: 0.8rem;
+  }
+  h1 {
+    font-size: 1.5rem;
+  }
+  h2 {
+    font-size: 1.2rem;
   }
 }
