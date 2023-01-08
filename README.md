@@ -42,7 +42,7 @@
 <br>
 The password generator application allows employees to generate a random password based on criteria that they select by modifying the starter code. The app will run in the browser using JavaScript code to dynamically update HTML and CSS. With a clean and responsive user interface, it will be adaptable to different screen sizes.
 
-Project Link: [https://github.com/myriamartin/password-generator](https://myriamartin.github.io/password-generator/)
+Project Link: [https://myriamartin.github.io/password-generator/](https://myriamartin.github.io/password-generator/)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -91,6 +91,7 @@ _Password generator expected behaviour [Password Generator App](https://myriamar
 | <img width="" height="50" align="center" src="./assets/css3-logo.png" alt="css logo" >
 | <img width="" height="40" align="center" src="./assets/js-logo.png" alt="js logo" >
 | <img width="" height="40" align="center" src="./assets/git-logo.png" alt="git logo" >
+| <img width="" height="40" align="center" src="./assets/vscode-logo.png" alt="git logo" >
 
 </div>
 
@@ -100,10 +101,10 @@ _Password generator expected behaviour [Password Generator App](https://myriamar
 
 ## Contact
 
-Myriam Martin EDX Student - frontend developer wannabe 🙋🏻‍♀️💻
+Myriam Martin EDx Student - frontend developer wannabe 🙋🏻‍♀️💻
 
 - [@myriamartin](https://www.github.com/myriamartin) <br>
-  Project Link: [https://github.com/myriamartin/password-generator](https://myriamartin.github.io/password-generator/)
+  Project Link: [https://myriamartin.github.io/password-generator/](https://myriamartin.github.io/password-generator/)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -114,9 +115,7 @@ Myriam Martin EDX Student - frontend developer wannabe 🙋🏻‍♀️💻
 - [EDx Front-End Web Development Boot camp](https://skillsforlife.edx.org/)
 - [MDN Web Docs](https://developer.mozilla.org/en-US/docs/Learn/JavaScript)
 - [othneildrew Best Readme Templates](https://github.com/othneildrew/Best-README-Template)
-- [How to write a Good readme](https://bulldogjob.com/news/449-how-to-write-a-good-readme-for-your-github-project)
 - [GitHub Pages](https://pages.github.com)
 - [React Icons](https://react-icons.github.io/react-icons/search)
-- [Img Shields](https://shields.io)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
